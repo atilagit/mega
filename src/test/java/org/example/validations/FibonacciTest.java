@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class FibonacciTest {
+    Fibonacci fibonacci = new Fibonacci();
 
     @Test
     void deveRetornarTrueParaListasValidasDeFibonacci() {
@@ -19,11 +20,11 @@ class FibonacciTest {
         var fibonacciV3 = List.of(5, 8, 13, 21, 34, 55);
 
         // ACT & ASSERT
-        assertTrue(Fibonacci.validar(fibonacciClassica), "A lista 'fibonacciClassica' deveria ser válida.");
-        assertTrue(Fibonacci.validar(fibonacciV0), "A lista 'fibonacciV0' deveria ser válida.");
-        assertTrue(Fibonacci.validar(fibonacciV1), "A lista 'fibonacciV1' deveria ser válida.");
-        assertTrue(Fibonacci.validar(fibonacciV2), "A lista 'fibonacciV2' deveria ser válida.");
-        assertTrue(Fibonacci.validar(fibonacciV3), "A lista 'fibonacciV3' deveria ser válida.");
+        assertTrue(fibonacci.validar(fibonacciClassica), "A lista 'fibonacciClassica' deveria ser válida.");
+        assertTrue(fibonacci.validar(fibonacciV0), "A lista 'fibonacciV0' deveria ser válida.");
+        assertTrue(fibonacci.validar(fibonacciV1), "A lista 'fibonacciV1' deveria ser válida.");
+        assertTrue(fibonacci.validar(fibonacciV2), "A lista 'fibonacciV2' deveria ser válida.");
+        assertTrue(fibonacci.validar(fibonacciV3), "A lista 'fibonacciV3' deveria ser válida.");
     }
 
     @Test
@@ -32,7 +33,7 @@ class FibonacciTest {
         var listaInvalida = List.of(1, 2, 3, 5, 8, 12); // Contém um número que não é da sequência de Fibonacci
 
         // ACT
-        boolean resultado = Fibonacci.validar(listaInvalida);
+        boolean resultado = fibonacci.validar(listaInvalida);
 
         // ASSERT
         assertFalse(resultado, "A lista 'listaInvalida' não deveria ser válida.");

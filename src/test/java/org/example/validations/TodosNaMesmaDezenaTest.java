@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class TodosNaMesmaDezenaTest {
+    TodosNaMesmaDezena todosNaMesmaDezena = new TodosNaMesmaDezena();
 
     @Test
     void deveRetornarTrueQuandoTodosOsNumerosEstaoNaMesmaDezena() {
@@ -18,10 +19,10 @@ class TodosNaMesmaDezenaTest {
         var list4 = List.of(25, 26, 30, 31, 32, 34); // Todos estão na dezena 25-34
 
         // ACT & ASSERT
-        assertTrue(TodosNaMesmaDezena.validar(list1), "A lista 'list1' deveria estar na mesma dezena.");
-        assertTrue(TodosNaMesmaDezena.validar(list2), "A lista 'list2' deveria estar na mesma dezena.");
-        assertTrue(TodosNaMesmaDezena.validar(list3), "A lista 'list3' deveria estar na mesma dezena.");
-        assertTrue(TodosNaMesmaDezena.validar(list4), "A lista 'list4' deveria estar na mesma dezena.");
+        assertTrue(todosNaMesmaDezena.validar(list1), "A lista 'list1' deveria estar na mesma dezena.");
+        assertTrue(todosNaMesmaDezena.validar(list2), "A lista 'list2' deveria estar na mesma dezena.");
+        assertTrue(todosNaMesmaDezena.validar(list3), "A lista 'list3' deveria estar na mesma dezena.");
+        assertTrue(todosNaMesmaDezena.validar(list4), "A lista 'list4' deveria estar na mesma dezena.");
     }
 
     @Test
@@ -32,8 +33,8 @@ class TodosNaMesmaDezenaTest {
         var list3 = List.of(23, 24, 26, 27, 28, 33); // 33 pertence a outra dezena
 
         // ACT & ASSERT
-        assertFalse(TodosNaMesmaDezena.validar(list1), "A lista 'list1' não deveria estar na mesma dezena.");
-        assertFalse(TodosNaMesmaDezena.validar(list2), "A lista 'list2' não deveria estar na mesma dezena.");
-        assertFalse(TodosNaMesmaDezena.validar(list3), "A lista 'list3' não deveria estar na mesma dezena.");
+        assertFalse(todosNaMesmaDezena.validar(list1), "A lista 'list1' não deveria estar na mesma dezena.");
+        assertFalse(todosNaMesmaDezena.validar(list2), "A lista 'list2' não deveria estar na mesma dezena.");
+        assertFalse(todosNaMesmaDezena.validar(list3), "A lista 'list3' não deveria estar na mesma dezena.");
     }
 }

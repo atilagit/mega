@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 class TriangularTest {
+    Triangular triangular = new Triangular();
 
     @Test
     void deveRetornarTrueParaListasValidasDeTriangulares() {
@@ -18,11 +19,11 @@ class TriangularTest {
         var triangularesV3 = List.of(15, 21, 28, 36, 45, 55);
 
         // ACT & ASSERT
-        assertTrue(Triangular.validar(triangularesClassica), "A lista 'triangularesClassica' deveria ser válida.");
-        assertTrue(Triangular.validar(triangularesV0), "A lista 'triangularesV0' deveria ser válida.");
-        assertTrue(Triangular.validar(triangularesV1), "A lista 'triangularesV1' deveria ser válida.");
-        assertTrue(Triangular.validar(triangularesV2), "A lista 'triangularesV2' deveria ser válida.");
-        assertTrue(Triangular.validar(triangularesV3), "A lista 'triangularesV3' deveria ser válida.");
+        assertTrue(triangular.validar(triangularesClassica), "A lista 'triangularesClassica' deveria ser válida.");
+        assertTrue(triangular.validar(triangularesV0), "A lista 'triangularesV0' deveria ser válida.");
+        assertTrue(triangular.validar(triangularesV1), "A lista 'triangularesV1' deveria ser válida.");
+        assertTrue(triangular.validar(triangularesV2), "A lista 'triangularesV2' deveria ser válida.");
+        assertTrue(triangular.validar(triangularesV3), "A lista 'triangularesV3' deveria ser válida.");
     }
 
     @Test
@@ -33,8 +34,8 @@ class TriangularTest {
         var listaInvalida3 = List.of(5, 10, 15, 21, 28, 36); // O número 5 não é triangular
 
         // ACT & ASSERT
-        assertFalse(Triangular.validar(listaInvalida1), "A lista 'listaInvalida1' não deveria ser válida.");
-        assertFalse(Triangular.validar(listaInvalida2), "A lista 'listaInvalida2' não deveria ser válida.");
-        assertFalse(Triangular.validar(listaInvalida3), "A lista 'listaInvalida3' não deveria ser válida.");
+        assertFalse(triangular.validar(listaInvalida1), "A lista 'listaInvalida1' não deveria ser válida.");
+        assertFalse(triangular.validar(listaInvalida2), "A lista 'listaInvalida2' não deveria ser válida.");
+        assertFalse(triangular.validar(listaInvalida3), "A lista 'listaInvalida3' não deveria ser válida.");
     }
 }

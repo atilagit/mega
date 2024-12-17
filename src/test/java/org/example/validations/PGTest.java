@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class PGTest {
+    PG pg = new PG();
 
     @Test
     void deveRetornarTrueParaListasValidasDePG() {
@@ -15,7 +16,7 @@ class PGTest {
         var list1 = List.of(1, 2, 4, 8, 16, 32); // Lista válida de uma PG com razão 2
 
         // ACT
-        boolean resultado = PG.validar(list1);
+        boolean resultado = pg.validar(list1);
 
         // ASSERT
         assertTrue(resultado, "A lista 'list1' deveria ser válida.");
@@ -27,7 +28,7 @@ class PGTest {
         var list1 = List.of(1, 2, 3, 4, 5, 6); // Lista inválida que não é uma PG
 
         // ACT
-        boolean resultado = PG.validar(list1);
+        boolean resultado = pg.validar(list1);
 
         // ASSERT
         assertFalse(resultado, "A lista 'list1' não deveria ser válida.");

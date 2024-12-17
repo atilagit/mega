@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class UmEmCadaDezenaTest {
+    UmEmCadaDezena umEmCadaDezena = new UmEmCadaDezena();
 
     @Test
     void deveRetornarTrueQuandoUmNumeroEstiverEmCadaDezena() {
@@ -16,10 +17,11 @@ class UmEmCadaDezenaTest {
         var list2 = List.of(9, 11, 29, 31, 49, 51); // Um número em cada dezena
         var list3 = List.of(4, 15, 26, 37, 48, 59); // Um número em cada dezena
 
+
         // ACT & ASSERT
-        assertTrue(UmEmCadaDezena.validar(list1), "A lista 'list1' deveria conter um número em cada dezena.");
-        assertTrue(UmEmCadaDezena.validar(list2), "A lista 'list2' deveria conter um número em cada dezena.");
-        assertTrue(UmEmCadaDezena.validar(list3), "A lista 'list3' deveria conter um número em cada dezena.");
+        assertTrue(umEmCadaDezena.validar(list1), "A lista 'list1' deveria conter um número em cada dezena.");
+        assertTrue(umEmCadaDezena.validar(list2), "A lista 'list2' deveria conter um número em cada dezena.");
+        assertTrue(umEmCadaDezena.validar(list3), "A lista 'list3' deveria conter um número em cada dezena.");
     }
 
     @Test
@@ -30,8 +32,8 @@ class UmEmCadaDezenaTest {
         var list3 = List.of(9, 16, 29, 35, 48, 50);  // Não atende o critério
 
         // ACT & ASSERT
-        assertFalse(UmEmCadaDezena.validar(list1), "A lista 'list1' não deveria atender ao critério.");
-        assertFalse(UmEmCadaDezena.validar(list2), "A lista 'list2' não deveria atender ao critério.");
-        assertFalse(UmEmCadaDezena.validar(list3), "A lista 'list3' não deveria atender ao critério.");
+        assertFalse(umEmCadaDezena.validar(list1), "A lista 'list1' não deveria atender ao critério.");
+        assertFalse(umEmCadaDezena.validar(list2), "A lista 'list2' não deveria atender ao critério.");
+        assertFalse(umEmCadaDezena.validar(list3), "A lista 'list3' não deveria atender ao critério.");
     }
 }

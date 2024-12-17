@@ -2,8 +2,8 @@ package org.example.validations;
 
 import java.util.List;
 
-public class PA {
-    public static boolean validar(List<Integer> list) {
+public class PA implements Validavel {
+    public boolean validar(List<Integer> list) {
         return existePedacoDePA(list);
     }
 

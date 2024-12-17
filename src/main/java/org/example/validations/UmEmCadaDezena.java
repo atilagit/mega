@@ -2,8 +2,8 @@ package org.example.validations;
 
 import java.util.List;
 
-public class UmEmCadaDezena {
-    public static boolean validar(List<Integer> list) {
+public class UmEmCadaDezena implements Validavel {
+    public boolean validar(List<Integer> list) {
         return ((list.get(0) <=10)
                 &&
                 ((list.get(1)>=11) && (list.get(1)<=20))
