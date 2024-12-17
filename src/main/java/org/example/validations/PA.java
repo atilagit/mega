@@ -9,14 +9,14 @@ public class PA {
 
     /**
      * Verifica se existe um "pedaço de PA" na lista.
-     * Um pedaço de PA é formado por 3 a 6 elementos consecutivos com a mesma razão.
+     * Um pedaço de PA formado por 5 a 6 elementos consecutivos com a mesma razão.
      *
      * @param lista Lista de 6 inteiros ordenados em ordem crescente.
-     * @return true se existir algum pedaço de PA (3 a 6 elementos consecutivos), false caso contrário.
+     * @return true se existir algum pedaço de PA (5 a 6 elementos consecutivos), false caso contrário.
      */
     private static boolean existePedacoDePA(List<Integer> lista) {
-        // A menor sequência que caracteriza uma PA é de tamanho 3
-        for (int tamanho = 3; tamanho <= 6; tamanho++) { // Tamanhos possíveis: 3 a 6
+        // A menor sequência que caracteriza uma PA é de tamanho 4
+        for (int tamanho = 5; tamanho <= 6; tamanho++) { // Tamanhos possíveis: 4 a 6
             for (int inicio = 0; inicio <= lista.size() - tamanho; inicio++) { // Posição inicial do pedaço de PA
                 if (verificarSubsequenciaPA(lista, inicio, tamanho)) {
                     return true; // Encontrou um pedaço de PA válido

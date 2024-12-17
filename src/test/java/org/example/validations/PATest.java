@@ -13,11 +13,11 @@ class PATest {
     void deveRetornarTrueQuandoExistirPedacoDePA() {
         // ARRANGE
         var list1 = List.of(1, 2, 3, 4, 5, 6); // PA completa
-        var list2 = List.of(1, 3, 5, 8, 11, 14); // Pedaço de PA (1, 3, 5)
-        var list3 = List.of(2, 4, 6, 9, 12, 15); // Pedaço de PA (2, 4, 6)
+        var list2 = List.of(1, 3, 5, 8, 11, 14); // Pedaço de PA (5, 8, 11, 14)
+        var list3 = List.of(2, 3, 6, 9, 12, 15); // Pedaço de PA (3, 6, 9, 12, 15)
         var list4 = List.of(6, 12, 18, 24, 30, 36); // PA completa
         var list5 = List.of(7, 14, 21, 28, 36, 50); // Pedaço de PA (7, 14, 21, 28)
-        var list6 = List.of(1, 2, 7, 14, 21, 50); // Pedaço de PA (7, 14, 21)
+        var list6 = List.of(1, 2, 7, 14, 21, 28); // Pedaço de PA (7, 14, 21, 28)
 
         // ACT & ASSERT
         assertTrue(PA.validar(list1), "A lista 'list1' deveria ser válida.");
