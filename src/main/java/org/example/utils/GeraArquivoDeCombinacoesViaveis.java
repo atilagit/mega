@@ -10,8 +10,10 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class GeraArquivoDeCombinacoesViaveis {
-    public static void execute(List<List<Integer>> todasCombinacoes) {
+    public static void execute(List<List<Integer>> todasCombinacoes, List<List<Integer>> alreadExistList) {
         Path outputPath = Paths.get("C:\\temp\\out.txt");
+
+        alreadExistList.forEach(todasCombinacoes::remove);
 
         try (BufferedWriter writer = Files.newBufferedWriter(outputPath)) {
             // Processa as combinações e grava no arquivo linha a linha
