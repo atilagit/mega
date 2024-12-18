@@ -33,6 +33,7 @@ public class TodasCombinacoes {
                 list.removeLast();
             }
         }
+        System.out.println("Total de combinações possíveis: " + listCompleto.size());
         return listCompleto;
     }
 }
