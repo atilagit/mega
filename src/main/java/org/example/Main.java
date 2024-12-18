@@ -13,7 +13,7 @@ public class Main {
         //new Relatorios().relatorios(todasCombinacoes);
 
         //GeraArquivoDeCombinacoesViaveis.execute(todasCombinacoes, alreadExistList);
-        //Sorteador.execute();
+        Sorteador.execute();
 
     }
 }
