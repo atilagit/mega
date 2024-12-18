@@ -9,7 +9,6 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class AlreadyExists {
-    public static final List<List<Integer>> alreadExistList = getAlreadExistList();
 
     public static List<List<Integer>> getAlreadExistList() {
         String filePath = "C:\\temp\\in.csv"; // Caminho do arquivo
