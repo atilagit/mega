@@ -4,15 +4,18 @@ import java.util.List;
 
 public class ParImpar implements Validavel {
     public boolean validar(List<Integer> list) {
-        if (list == null || list.isEmpty()) return false; // Valida lista nula ou vazia
+        int contPar = 0; // Contador de números pares
 
-        boolean primeiroPar = list.getFirst() % 2 == 0; // Verifica se o primeiro elemento é par
-
+        // Conta os números pares
         for (Integer numero : list) {
-            if ((numero % 2 == 0) != primeiroPar) {
-                return false; // Se houver mistura, retorna falso imediatamente
+            if (numero % 2 == 0) {
+                contPar++;
             }
         }
-        return true; // Todos os números são pares ou todos são ímpares
+
+        int contImpar = list.size() - contPar; // Números ímpares = Total - Pares
+
+        // Retorna verdadeiro se houver 5 ou mais pares ou 5 ou mais ímpares
+        return contPar >= 5 || contImpar >= 5;
     }
 }
