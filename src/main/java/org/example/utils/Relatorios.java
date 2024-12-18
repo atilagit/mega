@@ -13,6 +13,7 @@ public class Relatorios {
         gerarRelatorio(new TodosNaMesmaDezena(), combinacoes);
         gerarRelatorio(new Triangular(), combinacoes);
         gerarRelatorio(new UmEmCadaDezena(), combinacoes);
+        gerarRelatorio(new TresPrimeirosEmPA(), combinacoes);
     }
 
     private static void gerarRelatorio(Validavel validador, List<List<Integer>> combinacoes) {
